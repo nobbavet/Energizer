@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://1h78400qdv3j"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_2uxf7"]
+[ext_resource type="Texture2D" uid="uid://bnv5pyn33d6x6" path="res://Assets/lil B.png" id="1_5fxmj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwu31"]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_2uxf7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_5fxmj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fwu31")
+
+[node name="Camera2D" type="Camera2D" parent="."]
