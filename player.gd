@@ -3,9 +3,10 @@ extends CharacterBody2D
 var score = 0
 @onready var scoreText = $Camera2D/RichTextLabel
 @onready var sprite_2d = $Sprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
-const SPEED = 80.0
-const JUMP_VELOCITY = -250.0
+var SPEED = 80.0
+var JUMP_VELOCITY = -250.0
 #gravity syncing with project
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

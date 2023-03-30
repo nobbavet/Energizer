@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnwu6hyi3kbk2"]
+[gd_scene load_steps=8 format=3 uid="uid://bnwu6hyi3kbk2"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_ejels"]
 [ext_resource type="PackedScene" uid="uid://1h78400qdv3j" path="res://player.tscn" id="1_tj1he"]
-[ext_resource type="Texture2D" uid="uid://v2r4rm6qhlb1" path="res://Assets/Background/Brown.png" id="2_hfvjo"]
+[ext_resource type="Texture2D" uid="uid://v2r4rm6qhlb1" path="res://Assets/Brown.png" id="2_hfvjo"]
 [ext_resource type="Texture2D" uid="uid://c3la50fqu4et" path="res://Terrain (16x16).png" id="2_pvijl"]
-[ext_resource type="PackedScene" uid="uid://b4cqdai8db4hq" path="res://battery.tscn" id="4_jxh3f"]
 [ext_resource type="PackedScene" uid="uid://ccb64xkymj82o" path="res://portal.tscn" id="5_skuwq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sjbd"]
@@ -625,15 +624,3 @@ layer_0/tile_data = PackedInt32Array(131067, 458754, 1, 196603, 458754, 1, 26213
 
 [node name="Portal" parent="." instance=ExtResource("5_skuwq")]
 position = Vector2(224, 16)
-
-[node name="Battery" parent="." instance=ExtResource("4_jxh3f")]
-position = Vector2(64, -32)
-
-[node name="Battery2" parent="." instance=ExtResource("4_jxh3f")]
-position = Vector2(128, 0)
-
-[node name="Battery3" parent="." instance=ExtResource("4_jxh3f")]
-position = Vector2(-72, -16)
-
-[node name="Battery4" parent="." instance=ExtResource("4_jxh3f")]
-position = Vector2(-168, -20)
