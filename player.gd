@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+var score = 0
+@onready var scoreText = $Camera2D/RichTextLabel
+@onready var sprite_2d = $Sprite2D
+
 const SPEED = 80.0
 const JUMP_VELOCITY = -250.0
-#const ACCEL = 50
-
 #gravity syncing with project
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -14,13 +16,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#old movement code
-	#move_and_collide(Vector2(0, 1))
-	#if Input.is_action_pressed("ui_right"):
-	#	position.x += 2
-	#if Input.is_action_pressed("ui_left"):
-	#	position.x -= 2
-		
+	#score changes the text when a battery is collected
+	scoreText.text = str (self.score)
 	#Jumping system
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -36,7 +33,7 @@ func _process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 	else:
-			velocity.x = move_toward(velocity.x, 0, 0.6)
+			velocity.x = move_toward(velocity.x, 0, 5)
 		
 	move_and_slide()	
 		

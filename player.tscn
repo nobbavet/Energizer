@@ -1,18 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://1h78400qdv3j"]
+[gd_scene load_steps=5 format=3 uid="uid://1h78400qdv3j"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_2uxf7"]
-[ext_resource type="Texture2D" uid="uid://bnv5pyn33d6x6" path="res://Assets/lil B.png" id="1_5fxmj"]
+[ext_resource type="Texture2D" uid="uid://c1jlhh3dob0te" path="res://Assets/lil B 64x.png" id="2_rjgwb"]
+[ext_resource type="Texture2D" uid="uid://cm3l2rfvs55ca" path="res://BattCollect.png" id="3_vx08s"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwu31"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07vyd"]
+size = Vector2(20, 37.7778)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_2uxf7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_5fxmj")
+position = Vector2(4, -4)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("2_rjgwb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_fwu31")
+position = Vector2(6, -6.9)
+scale = Vector2(0.7, 0.9)
+shape = SubResource("RectangleShape2D_07vyd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+z_index = 1
+
+[node name="BattCollect" type="Sprite2D" parent="Camera2D" groups=["player"]]
+position = Vector2(120, -64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_vx08s")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
+offset_left = 128.0
+offset_top = -80.0
+offset_right = 144.0
+offset_bottom = -56.0
+text = "0"
