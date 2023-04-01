@@ -5,7 +5,7 @@ extends Area2D
 var required_batteries = {
 	"Level_0" : "3",
 	"Level_1" : "5",
-	"Level_2" : "10" 
+	"Level_2" : "9" 
 }
 
 func _ready():

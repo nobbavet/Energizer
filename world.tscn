@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnwu6hyi3kbk2"]
+[gd_scene load_steps=12 format=3 uid="uid://bnwu6hyi3kbk2"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_ejels"]
 [ext_resource type="PackedScene" uid="uid://1h78400qdv3j" path="res://player.tscn" id="1_tj1he"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://de64v0t6dajo3" path="res://Assets/tutorialBoard2.png" id="4_50fcc"]
 [ext_resource type="Texture2D" uid="uid://bbvc17gdj8ood" path="res://Assets/tutorialBoard.png" id="5_2dh0u"]
 [ext_resource type="PackedScene" uid="uid://ccb64xkymj82o" path="res://portal.tscn" id="5_skuwq"]
+[ext_resource type="Texture2D" uid="uid://ulgjom6fqikg" path="res://Assets/tutorialBoard3.png" id="5_y4yyk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sjbd"]
 texture = ExtResource("2_pvijl")
@@ -623,9 +624,14 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_2dh0u")
 
 [node name="TutorialBoard2" type="Sprite2D" parent="."]
-position = Vector2(208, -16)
+position = Vector2(408, -64)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_50fcc")
+
+[node name="TutorialBoard3" type="Sprite2D" parent="."]
+position = Vector2(712, -16)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_y4yyk")
 
 [node name="Portal" parent="." instance=ExtResource("5_skuwq")]
 position = Vector2(1036, -256)
