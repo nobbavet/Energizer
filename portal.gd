@@ -3,7 +3,7 @@ extends Area2D
 @onready var required_batteries_text = $required_batteries_text
 #portal pass through
 var required_batteries = {
-	"Level_0" : "0",
+	"Level_0" : "3",
 	"Level_1" : "5",
 	"Level_2" : "10" 
 }
