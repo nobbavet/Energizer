@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqq6hbp5jtw4"]
+
+[ext_resource type="Texture2D" uid="uid://io2bi4u1r7p8" path="res://Assets/endScreen.png" id="1_k22dl"]
+[ext_resource type="Script" path="res://endScreen.gd" id="1_vfm21"]
+[ext_resource type="Texture2D" uid="uid://du7qypptw01lg" path="res://Assets/quitbtn.png" id="3_qik3t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_left = -0.062
+anchor_top = -0.086
+anchor_right = 0.146
+anchor_bottom = 0.086
+offset_left = 71.424
+offset_top = 55.728
+offset_right = 183.808
+offset_bottom = 136.272
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vfm21")
+
+[node name="EndScreen" type="Sprite2D" parent="."]
+position = Vector2(88, 24)
+scale = Vector2(0.3, 0.294)
+texture = ExtResource("1_k22dl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -57.0
+offset_right = 82.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_qik3t")
+
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

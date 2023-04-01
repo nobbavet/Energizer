@@ -24,6 +24,8 @@ func _on_body_entered(body):
 					get_tree().change_scene_to_file("res://level_1.tscn")
 				"Level_1":
 					get_tree().change_scene_to_file("res://level_2.tscn")
+				"Level_2":
+					get_tree().change_scene_to_file("res://endScreen.tscn")
 		else:
 			print ("You don't have enough batteries")
 
